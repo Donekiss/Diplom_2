@@ -1,25 +1,23 @@
 package customer;
 
-public class CustomerToken {
-    private  String  accessToken ;
-    private String  refreshToken;
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 
-    public CustomerToken() {
-    }
+public class CustomerToken {
+    @SerializedName("accessToken")
+    private String accessToken;
+    @SerializedName("refreshToken")
+    private String refreshToken;
 
     public String getAccessToken() {
         return accessToken;
     }
-
     public String getRefreshToken() {
         return refreshToken;
     }
 
-    public void setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
-    }
-
-    public void setRefreshToken(String refreshToken) {
-        this.refreshToken = refreshToken;
+    public static CustomerToken fromJson(String json) {
+        Gson gson = new Gson();
+        return gson.fromJson(json, CustomerToken.class);
     }
 }
