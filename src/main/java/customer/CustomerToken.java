@@ -26,4 +26,9 @@ public class CustomerToken {
         CustomerToken authResponse = CustomerToken.fromJson(responseBody);
         return authResponse.getAccessToken();
     }
+    public static String extractRefreshToken(Response response) {
+        String responseBody = response.getBody().asString();
+        CustomerToken authResponse = CustomerToken.fromJson(responseBody);
+        return authResponse.getRefreshToken();
+    }
 }

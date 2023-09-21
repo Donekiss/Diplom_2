@@ -8,6 +8,8 @@ public class CustomerClient {
     private static final String CREATE_CUSTOMER = "/api/auth/register";
     private static final String PASS_CUSTOMER = "/api/auth/login";
     private static final String MODIFY_CUSTOMER = "/api/auth/user";
+    private static final String INFO_CUSTOMER = "/api/auth/user";
+    private static final String LOGOUT_CUSTOMER = "/api/auth/logout";
     private static final String DELETE_CUSTOMER = "/api/auth/user";
 
 
@@ -25,13 +27,29 @@ public class CustomerClient {
                 .when()
                 .post(PASS_CUSTOMER);
     }
-    public Response modify(CustomerModify modify, CustomerToken token){
+    public Response modify(Customer customer, String token){
         return  given()
                 .header("Authorization", token)
                 .header("Content-type", "application/json")
-                .and().body(modify)
+                .and().body(customer)
                 .when()
-                .post(MODIFY_CUSTOMER);
+                .patch(MODIFY_CUSTOMER);
+    }
+    public Response info(String token){
+        return  given()
+                .header("Authorization", token)
+                .header("Content-type", "application/json")
+                .and()
+                .when()
+                .get(INFO_CUSTOMER);
+    }
+    public Response logout(String token){
+        return  given()
+                .header("Authorization", token)
+                .header("Content-type", "application/json")
+                .and()
+                .when()
+                .get(LOGOUT_CUSTOMER);
     }
 
     public Response delete(String token){
