@@ -3,6 +3,7 @@ package order;
 import base.url.BaseUrl;
 import customer.Customer;
 import customer.CustomerClient;
+import customer.CustomerGenerator;
 import customer.CustomerToken;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
@@ -14,7 +15,6 @@ import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import utils.Generator;
 
 import java.util.*;
 
@@ -27,29 +27,24 @@ public class CreateOrderTest {
     private OrderClient orderClient = new OrderClient();
     private String tokenExtract;
     private static Customer customer;
-    private List<String> idList;
-    List<String> ingredientsList;
+    private List<String>randomIngredients;
     @Before
     public  void setUp(){
         RestAssured.baseURI = BaseUrl.getBASE_URL();
 
-        customer = Generator.randomCustomer();
+        customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
         tokenExtract = CustomerToken.extractAccessToken(response);
 
         Response responseIngredients = orderClient.infoIngredients();
-        idList = Generator.extractIdsFromResponse(responseIngredients);
-
-        ingredientsList = new ArrayList<>();
-        ingredientsList.add(idList.get(0));
-        ingredientsList.add(idList.get(5));
+        randomIngredients = OrderGenerator.createRandomIngredients(responseIngredients, 3);
     }
     @Test
     @DisplayName("Check status code and body after create order")
     public void testCreateOrder() {
         JSONObject requestBody = new JSONObject();
 
-        String requestForBody = requestBody.put("ingredients", new JSONArray(ingredientsList)).toString();
+        String requestForBody = requestBody.put("ingredients", new JSONArray(randomIngredients)).toString();
         Response response = orderClient.create(requestForBody,tokenExtract);
 
         assertEquals("Неверный статус код", HttpStatus.SC_OK, response.statusCode());
@@ -67,7 +62,7 @@ public class CreateOrderTest {
     public void testCreateOrderWithOutToken() {
         JSONObject requestBody = new JSONObject();
 
-        String request = requestBody.put("ingredients", new JSONArray(ingredientsList)).toString();
+        String request = requestBody.put("ingredients", new JSONArray(randomIngredients)).toString();
         Response response = orderClient.create(request, "");
 
         assertEquals("Неверный статус код", HttpStatus.SC_OK, response.statusCode());

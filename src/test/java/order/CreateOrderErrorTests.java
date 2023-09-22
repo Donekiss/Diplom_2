@@ -3,6 +3,7 @@ package order;
 import base.url.BaseUrl;
 import customer.Customer;
 import customer.CustomerClient;
+import customer.CustomerGenerator;
 import customer.CustomerToken;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
@@ -12,7 +13,7 @@ import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import utils.Generator;
+
 
 import java.util.*;
 
@@ -33,12 +34,12 @@ public class CreateOrderErrorTests {
     public void setUp() {
         RestAssured.baseURI = BaseUrl.getBASE_URL();
 
-        customer = Generator.randomCustomer();
+        customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
         tokenExtract = CustomerToken.extractAccessToken(response);
 
         Response responseIngredients = orderClient.infoIngredients();
-        idList = Generator.extractIdsFromResponse(responseIngredients);
+        idList = OrderGenerator.extractIdsFromResponse(responseIngredients);
     }
 
     @Test

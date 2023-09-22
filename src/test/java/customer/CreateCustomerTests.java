@@ -9,12 +9,11 @@ import org.apache.http.HttpStatus;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import utils.Generator;
 
 import java.util.Map;
 
+import static customer.CustomerGenerator.*;
 import static org.junit.Assert.*;
-import static utils.Generator.*;
 
 public class CreateCustomerTests {
 
@@ -28,7 +27,7 @@ public class CreateCustomerTests {
     @DisplayName("Check status code after authorization")
     public void testCreateCustomer() {
 
-        Customer customer = Generator.randomCustomer();
+        Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
 
         assertEquals("Неверный статус код", HttpStatus.SC_OK, response.statusCode());
@@ -39,7 +38,7 @@ public class CreateCustomerTests {
     @DisplayName("Check response body structure after authorization")
     public void testCreateCustomerWithResponse() {
 
-        Customer customer = Generator.randomCustomer();
+        Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
 
         JsonPath jsonPath = response.jsonPath();
@@ -57,7 +56,7 @@ public class CreateCustomerTests {
     @Test
     @DisplayName("Check status code create duplicate customer")
     public void testCreateCustomerDuplicate() {
-        Customer customer = Generator.randomCustomer();
+        Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
 
         token = CustomerToken.extractAccessToken(response);
@@ -70,7 +69,7 @@ public class CreateCustomerTests {
     @DisplayName("Check response body after try duplicate authorization")
     public void testCreateCustomerDuplicateWithResponse() {
 
-        Customer customer = Generator.randomCustomer();
+        Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
         token = CustomerToken.extractAccessToken(response);
         Response responseDuplicate = customerClient.create(customer);

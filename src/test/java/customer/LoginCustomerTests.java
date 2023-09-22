@@ -9,7 +9,6 @@ import org.apache.http.HttpStatus;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import utils.Generator;
 
 import java.util.Map;
 
@@ -24,7 +23,7 @@ public class LoginCustomerTests {
     @Before
     public  void setUp(){
         RestAssured.baseURI = BaseUrl.getBASE_URL();
-        customer = Generator.randomCustomer();
+        customer = CustomerGenerator.randomCustomer();
         customerClient.create(customer);
     }
     @Test

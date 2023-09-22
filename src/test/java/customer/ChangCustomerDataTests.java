@@ -9,13 +9,13 @@ import org.apache.http.HttpStatus;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import utils.Generator;
 
 import java.util.Map;
 
+import static customer.CustomerGenerator.randomName;
+import static customer.CustomerGenerator.randomPassword;
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertTrue;
-import static utils.Generator.*;
 
 public class ChangCustomerDataTests {
     private CustomerClient customerClient = new CustomerClient();
@@ -25,7 +25,7 @@ public class ChangCustomerDataTests {
     @Before
     public  void setUp(){
         RestAssured.baseURI = BaseUrl.getBASE_URL();
-        customer = Generator.randomCustomer();
+        customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
         tokenExtract = CustomerToken.extractAccessToken(response);
         tokenRefresh = CustomerToken.extractRefreshToken(response);
@@ -33,7 +33,7 @@ public class ChangCustomerDataTests {
     @Test
     @DisplayName("Check status code and body after changing all customer data")
     public void testChangAllCustomerData() {
-        Customer customer = Generator.randomCustomer();
+        Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.modify(customer, tokenExtract);
 
         assertEquals("Неверный статус код", HttpStatus.SC_OK, response.statusCode());
@@ -51,7 +51,7 @@ public class ChangCustomerDataTests {
     public void testChangCustomerDataWithOutAuth() {
         customerClient.logout(tokenRefresh);
 
-        Customer customer = Generator.randomCustomer();
+        Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.modify(customer, "");
 
         assertEquals("Неверный статус код", HttpStatus.SC_UNAUTHORIZED, response.statusCode());
@@ -64,7 +64,7 @@ public class ChangCustomerDataTests {
     @Test
     @DisplayName("Check status code and body after changing customer data with duplicate email")
     public void testChangCustomerDataWithDuplicateEmail() {
-        Customer customer2 = Generator.randomCustomer();
+        Customer customer2 = CustomerGenerator.randomCustomer();
         Response response2 = customerClient.create(customer2);
         String tokenExtract2;
         tokenExtract2 = CustomerToken.extractAccessToken(response2);
