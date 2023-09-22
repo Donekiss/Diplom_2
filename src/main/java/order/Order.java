@@ -4,10 +4,7 @@ import customer.Customer;
 import customer.CustomerClient;
 import customer.CustomerGenerator;
 import customer.CustomerToken;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.List;
 
@@ -29,10 +26,18 @@ public class Order {
 
     public Response createOrderWithRandomIngredients(int numberOfIngredients) {
         Response responseIngredients = orderClient.infoIngredients();
-        List<String> randomIngredients = OrderGenerator.createRandomIngredients(responseIngredients, numberOfIngredients);
+        List<String> randomOrders = OrderGenerator.createRandomIngredients(responseIngredients, numberOfIngredients);
 
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("ingredients", new JSONArray(randomIngredients));
+        StringBuilder requestBody = new StringBuilder();
+        requestBody.append("{ \"ingredients\": [");
+
+        for (int i = 0; i < randomOrders.size(); i++) {
+            requestBody.append("\"").append(randomOrders.get(i)).append("\"");
+            if (i < randomOrders.size() - 1) {
+                requestBody.append(",");
+            }
+        }
+        requestBody.append("] }");
 
         String requestForBody = requestBody.toString();
         return orderClient.create(requestForBody, tokenExtract);

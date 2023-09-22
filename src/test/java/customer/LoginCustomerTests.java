@@ -1,6 +1,7 @@
 package customer;
 
 import base.url.BaseUrl;
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -28,6 +29,7 @@ public class LoginCustomerTests {
     }
     @Test
     @DisplayName("Check status code after login")
+    @Description("Checking good login")
     public void testLoginCustomer() {
         CustomerPass courierPass = CustomerPass.passFrom(customer);
         Response response = customerClient.pass(courierPass);
@@ -38,6 +40,7 @@ public class LoginCustomerTests {
     }
     @Test
     @DisplayName("Check response body structure after login")
+    @Description("Checking body response")
     public void testLoginCustomerWithResponse() {
         CustomerPass courierPass = CustomerPass.passFrom(customer);
         Response response = customerClient.pass(courierPass);
@@ -56,6 +59,7 @@ public class LoginCustomerTests {
     }
     @Test
     @DisplayName("Check status code and body after login with mistake in email")
+    @Description("Checking bad login")
     public void testLoginCustomerWithMistakeEmail() {
         CustomerPass courierPass = new CustomerPass("3" + customer.getEmail(), customer.getPassword());
         Response response = customerClient.pass(courierPass);
@@ -69,6 +73,7 @@ public class LoginCustomerTests {
     }
     @Test
     @DisplayName("Check status code and body after login with mistake in password")
+    @Description("Checking bad login")
     public void testLoginCustomerWithMistakePassword() {
         CustomerPass courierPass = new CustomerPass(customer.getEmail(), customer.getPassword() + "3");
         Response response = customerClient.pass(courierPass);

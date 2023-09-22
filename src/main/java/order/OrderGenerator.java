@@ -1,14 +1,9 @@
 package order;
 
-
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import customer.Customer;
-import customer.CustomerClient;
-import customer.CustomerGenerator;
-import customer.CustomerToken;
 import io.restassured.response.Response;
 
 

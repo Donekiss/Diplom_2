@@ -5,6 +5,7 @@ import customer.Customer;
 import customer.CustomerClient;
 import customer.CustomerGenerator;
 import customer.CustomerToken;
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -41,6 +42,7 @@ public class CreateOrderTest {
     }
     @Test
     @DisplayName("Check status code and body after create order")
+    @Description("Checking create order")
     public void testCreateOrder() {
         JSONObject requestBody = new JSONObject();
 
@@ -59,6 +61,7 @@ public class CreateOrderTest {
     }
     @Test
     @DisplayName("Check status code for create order with out token")
+    @Description("Checking bad response")
     public void testCreateOrderWithOutToken() {
         JSONObject requestBody = new JSONObject();
 

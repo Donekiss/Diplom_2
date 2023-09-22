@@ -5,6 +5,7 @@ import customer.Customer;
 import customer.CustomerClient;
 import customer.CustomerGenerator;
 import customer.CustomerToken;
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -44,6 +45,7 @@ public class CreateOrderErrorTests {
 
     @Test
     @DisplayName("Check status code for invalid ingredients")
+    @Description("Checking order invalid ingredient")
     public void testCreateOrderWithInvalidIngredients() {
         List<String> invalidIngredients = new ArrayList<>();
         invalidIngredients.add("error000id000ingredient");
@@ -57,6 +59,7 @@ public class CreateOrderErrorTests {
     }
     @Test
     @DisplayName("Check status code and body for null ingredients")
+    @Description("Checking order without ingredients")
     public void testCreateOrderWithOutIngredients() {
         Response response = orderClient.create("", tokenExtract);
 

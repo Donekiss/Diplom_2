@@ -1,6 +1,7 @@
 package customer;
 
 import base.url.BaseUrl;
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -32,6 +33,7 @@ public class ChangCustomerDataTests {
     }
     @Test
     @DisplayName("Check status code and body after changing all customer data")
+    @Description("Checking chang email and name and password")
     public void testChangAllCustomerData() {
         Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.modify(customer, tokenExtract);
@@ -48,6 +50,7 @@ public class ChangCustomerDataTests {
     }
     @Test
     @DisplayName("Check status code and body after changing customer data with out authorization")
+    @Description("Checking bad chang")
     public void testChangCustomerDataWithOutAuth() {
         customerClient.logout(tokenRefresh);
 
@@ -63,6 +66,7 @@ public class ChangCustomerDataTests {
     }
     @Test
     @DisplayName("Check status code and body after changing customer data with duplicate email")
+    @Description("Checking bad chang")
     public void testChangCustomerDataWithDuplicateEmail() {
         Customer customer2 = CustomerGenerator.randomCustomer();
         Response response2 = customerClient.create(customer2);

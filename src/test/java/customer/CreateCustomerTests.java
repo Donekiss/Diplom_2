@@ -1,6 +1,7 @@
 package customer;
 
 import base.url.BaseUrl;
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -25,6 +26,7 @@ public class CreateCustomerTests {
     }
     @Test
     @DisplayName("Check status code after authorization")
+    @Description("Checking good authorization")
     public void testCreateCustomer() {
 
         Customer customer = CustomerGenerator.randomCustomer();
@@ -36,6 +38,7 @@ public class CreateCustomerTests {
     }
     @Test
     @DisplayName("Check response body structure after authorization")
+    @Description("Checking body response")
     public void testCreateCustomerWithResponse() {
 
         Customer customer = CustomerGenerator.randomCustomer();
@@ -55,6 +58,7 @@ public class CreateCustomerTests {
     }
     @Test
     @DisplayName("Check status code create duplicate customer")
+    @Description("Checking code double registration")
     public void testCreateCustomerDuplicate() {
         Customer customer = CustomerGenerator.randomCustomer();
         Response response = customerClient.create(customer);
@@ -67,6 +71,7 @@ public class CreateCustomerTests {
     }
     @Test
     @DisplayName("Check response body after try duplicate authorization")
+    @Description("Checking body double registration")
     public void testCreateCustomerDuplicateWithResponse() {
 
         Customer customer = CustomerGenerator.randomCustomer();
@@ -81,6 +86,7 @@ public class CreateCustomerTests {
     }
     @Test
     @DisplayName("Check status code and body after authorization with out name")
+    @Description("Checking bad registration")
     public void testCreateCustomerWithOutName() {
         Customer customer = new Customer()
                 .withEmail(randomEmail())
@@ -96,6 +102,7 @@ public class CreateCustomerTests {
     }
     @Test
     @DisplayName("Check status code and body after authorization with out email")
+    @Description("Checking bad registration")
     public void testCreateCustomerWithOutEmail() {
         Customer customer = new Customer()
                 .withEmail(randomName())
@@ -111,6 +118,7 @@ public class CreateCustomerTests {
     }
     @Test
     @DisplayName("Check status code and body after authorization with out password")
+    @Description("Checking bad registration")
     public void testCreateCustomerWithOutPassword() {
         Customer customer = new Customer()
                 .withPassword(randomName())
