@@ -1,5 +1,6 @@
 package order;
 
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
@@ -10,15 +11,17 @@ public class OrderClient {
     private static final String ALL_ORDERS = "/api/orders/all";
     private static final String CUSTOMER_ORDERS = "/api/orders";
 
-    public Response infoIngredients(){
-        return  given()
+    @Step("Api get info ingredients")
+    public Response infoIngredients() {
+        return given()
                 .header("Content-type", "application/json")
                 .and()
                 .when()
                 .get(INFO_INGREDIENTS);
     }
-    public Response create(String Ids, String token){
 
+    @Step("Api post create a customer order")
+    public Response create(String Ids, String token) {
         return given()
                 .header("Authorization", token)
                 .header("Content-type", "application/json")
@@ -26,15 +29,19 @@ public class OrderClient {
                 .when()
                 .post(CREATE_ORDERS);
     }
-    public Response infoAllOrders(){
-        return  given()
+
+    @Step("Api get all ingredients")
+    public Response infoAllOrders() {
+        return given()
                 .header("Content-type", "application/json")
                 .and()
                 .when()
                 .get(ALL_ORDERS);
     }
-    public Response customerOrders(String token){
-        return  given()
+
+    @Step("Api get customer orders")
+    public Response customerOrders(String token) {
+        return given()
                 .header("Authorization", token)
                 .header("Content-type", "application/json")
                 .and()

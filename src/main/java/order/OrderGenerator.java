@@ -4,14 +4,15 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
-
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class OrderGenerator {
+    @Step("Create list  with extracted Id from list orders")
     public static List<String> extractIdsFromResponse(Response response) {
         Gson gson = new Gson();
         JsonObject jsonObject = gson.fromJson(response.getBody().asString(), JsonObject.class);
@@ -29,6 +30,8 @@ public class OrderGenerator {
         }
         return idList;
     }
+
+    @Step("Create list with random ingredients")
     public static List<String> createRandomIngredients(Response response, int countIngredients) {
         List<String> idList = extractIdsFromResponse(response);
         List<String> randomIngredients = new ArrayList<>();
@@ -41,5 +44,18 @@ public class OrderGenerator {
         }
         return randomIngredients;
     }
+
+    @Step("Create invalid ingredients")
+    public static List<String> createInvalidIngredients() {
+        List<String> invalidIngredients = new ArrayList<>();
+        invalidIngredients.add("error000id000ingredient");
+        return invalidIngredients;
+    }
+
+    @Step("Create ingredients with null id")
+    public static String createNullIngredients() {
+        return "";
+    }
+
 
 }

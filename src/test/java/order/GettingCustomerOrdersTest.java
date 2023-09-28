@@ -10,21 +10,19 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.apache.http.HttpStatus;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static mathods.MethodsCompare.*;
 
 public class GettingCustomerOrdersTest {
-    private CustomerClient customerClient = new CustomerClient();
-    private OrderClient orderClient = new OrderClient();
-    private String tokenExtract;
     private static Customer customer;
+    private final CustomerClient customerClient = new CustomerClient();
+    private final OrderClient orderClient = new OrderClient();
+    private String tokenExtract;
     private List<String> randomIngredients;
 
     @Before
@@ -46,8 +44,9 @@ public class GettingCustomerOrdersTest {
     public void testGetCustomerOrdersCode() {
         Response response = orderClient.customerOrders(tokenExtract);
 
-        assertEquals("Неверный статус код", HttpStatus.SC_OK, response.statusCode());
+        checkStatusCode(200, response);
     }
+
     @Test
     @DisplayName("Check status body for taken orders of the customer")
     @Description("Checking response body")
@@ -55,23 +54,24 @@ public class GettingCustomerOrdersTest {
         Response response = orderClient.customerOrders(tokenExtract);
 
         JsonPath jsonPath = response.jsonPath();
-        assertTrue(jsonPath.getBoolean("success"));
-        assertNotNull(jsonPath.getList("orders"));
-        assertNotNull(jsonPath.getString("total"));
-        assertNotNull(jsonPath.getString("totalToday"));
+        checkSuccessStatusTrue(jsonPath);
+        checkNotNullValueList("orders", jsonPath);
+        checkNotNullValueString("total", jsonPath);
+        checkNotNullValueString("totalToday", jsonPath);
     }
+
     @Test
     @DisplayName("Check status code and body for taken orders of the customer with out authorization")
     @Description("Checking bad response")
     public void testGetCustomerOrdersWithOutAuthorization() {
         Response response = orderClient.customerOrders("");
 
-        assertEquals("Неверный статус код", HttpStatus.SC_UNAUTHORIZED, response.statusCode());
+        checkStatusCode(401, response);
 
         JsonPath jsonPath = response.jsonPath();
-        assertFalse(jsonPath.getBoolean("success"));
+        checkSuccessStatusFalse(jsonPath);
         String errorMessage = jsonPath.getString("message");
-        assertEquals("Неверное сообщение об ошибке", "You should be authorised", errorMessage);
+        checkErrorMassage("You should be authorised", errorMessage);
     }
 
     @After

@@ -1,0 +1,286 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "customer",
+    "children" : [ {
+      "name" : "testChangCustomerDataWithOutAuth",
+      "uid" : "ff2d84011da607a4",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926552201,
+        "stop" : 1695926564063,
+        "duration" : 11862
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testChangAllCustomerData",
+      "uid" : "76a4246f2f2bd0fd",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926564412,
+        "stop" : 1695926567212,
+        "duration" : 2800
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testChangCustomerDataWithDuplicateEmail",
+      "uid" : "2f53436b70e14846",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926567291,
+        "stop" : 1695926571709,
+        "duration" : 4418
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateCustomerWithOutName",
+      "uid" : "f1a62b27ca49e617",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926571724,
+        "stop" : 1695926572499,
+        "duration" : 775
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateCustomerDuplicateWithResponse",
+      "uid" : "23d3f98efd16e390",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926572503,
+        "stop" : 1695926575830,
+        "duration" : 3327
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateCustomerDuplicate",
+      "uid" : "b237b49792d5a373",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926575836,
+        "stop" : 1695926578972,
+        "duration" : 3136
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateCustomerWithResponse",
+      "uid" : "ed6398380d442b1",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926578979,
+        "stop" : 1695926580533,
+        "duration" : 1554
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateCustomerWithOutEmail",
+      "uid" : "ba5411763cbb1867",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926580539,
+        "stop" : 1695926581212,
+        "duration" : 673
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateCustomer",
+      "uid" : "89c0a430f7715e6d",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926581217,
+        "stop" : 1695926583899,
+        "duration" : 2682
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateCustomerWithOutPassword",
+      "uid" : "127a0a83d7fa893d",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926583931,
+        "stop" : 1695926584907,
+        "duration" : 976
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testLoginCustomerWithResponse",
+      "uid" : "c40ccb7e60fac76",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926584917,
+        "stop" : 1695926587189,
+        "duration" : 2272
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testLoginCustomerWithMistakePassword",
+      "uid" : "3fab773d2476497f",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926587193,
+        "stop" : 1695926588557,
+        "duration" : 1364
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testLoginCustomer",
+      "uid" : "8ac0949d2b79ebd1",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926588562,
+        "stop" : 1695926590681,
+        "duration" : 2119
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testLoginCustomerWithMistakeEmail",
+      "uid" : "11f2f7eaf8392938",
+      "parentUid" : "52a180f9f3199f172ffee01fd51f72cf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926590686,
+        "stop" : 1695926593005,
+        "duration" : 2319
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "52a180f9f3199f172ffee01fd51f72cf"
+  }, {
+    "name" : "order",
+    "children" : [ {
+      "name" : "testCreateOrderWithOutIngredients",
+      "uid" : "c232ed83c7ecbfcb",
+      "parentUid" : "4d6bb425b6e7f7ee024da62bb6b2562d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926593102,
+        "stop" : 1695926596715,
+        "duration" : 3613
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateOrderWithInvalidIngredients",
+      "uid" : "159ad46934cbd7f3",
+      "parentUid" : "4d6bb425b6e7f7ee024da62bb6b2562d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926596719,
+        "stop" : 1695926599928,
+        "duration" : 3209
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateOrder",
+      "uid" : "dda11f0d7971c1f9",
+      "parentUid" : "4d6bb425b6e7f7ee024da62bb6b2562d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926599936,
+        "stop" : 1695926602938,
+        "duration" : 3002
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreateOrderWithOutToken",
+      "uid" : "27856667f5a7e97d",
+      "parentUid" : "4d6bb425b6e7f7ee024da62bb6b2562d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926602943,
+        "stop" : 1695926605811,
+        "duration" : 2868
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testGetCustomerOrdersBody",
+      "uid" : "ce7cb886340e8df7",
+      "parentUid" : "4d6bb425b6e7f7ee024da62bb6b2562d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926605819,
+        "stop" : 1695926609291,
+        "duration" : 3472
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testGetCustomerOrdersCode",
+      "uid" : "719c3079a891c821",
+      "parentUid" : "4d6bb425b6e7f7ee024da62bb6b2562d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926609295,
+        "stop" : 1695926613461,
+        "duration" : 4166
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testGetCustomerOrdersWithOutAuthorization",
+      "uid" : "65d1f3cea28bdfd5",
+      "parentUid" : "4d6bb425b6e7f7ee024da62bb6b2562d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1695926613467,
+        "stop" : 1695926618214,
+        "duration" : 4747
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "4d6bb425b6e7f7ee024da62bb6b2562d"
+  } ]
+}

@@ -6,27 +6,26 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.apache.http.HttpStatus;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Map;
-
-import static org.junit.Assert.*;
-import static org.junit.Assert.assertTrue;
+import static customer.CustomerPass.passFromWithMistakeEmail;
+import static customer.CustomerPass.passFromWithMistakePassword;
+import static mathods.MethodsCompare.*;
 
 public class LoginCustomerTests {
-    private CustomerClient customerClient = new CustomerClient();
-    private String token;
     private static Customer customer;
+    private final CustomerClient customerClient = new CustomerClient();
+    private String token;
 
     @Before
-    public  void setUp(){
+    public void setUp() {
         RestAssured.baseURI = BaseUrl.getBASE_URL();
         customer = CustomerGenerator.randomCustomer();
         customerClient.create(customer);
     }
+
     @Test
     @DisplayName("Check status code after login")
     @Description("Checking good login")
@@ -34,10 +33,11 @@ public class LoginCustomerTests {
         CustomerPass courierPass = CustomerPass.passFrom(customer);
         Response response = customerClient.pass(courierPass);
 
-        assertEquals("Неверный статус код", HttpStatus.SC_OK, response.statusCode());
+        checkStatusCode(200, response);
 
         token = CustomerToken.extractAccessToken(response);
     }
+
     @Test
     @DisplayName("Check response body structure after login")
     @Description("Checking body response")
@@ -46,48 +46,47 @@ public class LoginCustomerTests {
         Response response = customerClient.pass(courierPass);
 
         JsonPath jsonPath = response.jsonPath();
-        assertTrue(jsonPath.getBoolean("success"));
-        assertNotNull(jsonPath.getString("accessToken"));
-        assertNotNull(jsonPath.getString("refreshToken"));
-
-        Map<String, String> user = jsonPath.getMap("user");
-        assertNotNull(user);
-        assertTrue(user.containsKey("email"));
-        assertTrue(user.containsKey("name"));
+        checkSuccessStatusTrue(jsonPath);
+        checkNotNullAccessToken(jsonPath);
+        checkNotNullRefreshToken(jsonPath);
+        checkPresenceMailAndName(jsonPath);
 
         token = CustomerToken.extractAccessToken(response);
     }
+
     @Test
     @DisplayName("Check status code and body after login with mistake in email")
     @Description("Checking bad login")
     public void testLoginCustomerWithMistakeEmail() {
-        CustomerPass courierPass = new CustomerPass("3" + customer.getEmail(), customer.getPassword());
+        CustomerPass courierPass = passFromWithMistakeEmail("3", customer);
         Response response = customerClient.pass(courierPass);
 
-        assertEquals("Неверный статус код", HttpStatus.SC_UNAUTHORIZED, response.statusCode());
+        checkStatusCode(401, response);
 
         JsonPath jsonPath = response.jsonPath();
-        assertFalse(jsonPath.getBoolean("success"));
+        checkSuccessStatusFalse(jsonPath);
         String errorMessage = jsonPath.getString("message");
-        assertEquals("Неверное сообщение об ошибке", "email or password are incorrect", errorMessage);
+        checkErrorMassage("email or password are incorrect", errorMessage);
     }
+
     @Test
     @DisplayName("Check status code and body after login with mistake in password")
     @Description("Checking bad login")
     public void testLoginCustomerWithMistakePassword() {
-        CustomerPass courierPass = new CustomerPass(customer.getEmail(), customer.getPassword() + "3");
+        CustomerPass courierPass = passFromWithMistakePassword("3", customer);
         Response response = customerClient.pass(courierPass);
 
-        assertEquals("Неверный статус код", HttpStatus.SC_UNAUTHORIZED, response.statusCode());
+        checkStatusCode(401, response);
 
         JsonPath jsonPath = response.jsonPath();
-        assertFalse(jsonPath.getBoolean("success"));
+        checkSuccessStatusFalse(jsonPath);
         String errorMessage = jsonPath.getString("message");
-        assertEquals("Неверное сообщение об ошибке", "email or password are incorrect", errorMessage);
+        checkErrorMassage("email or password are incorrect", errorMessage);
     }
+
     @After
-    public void deleteCustomer(){
-        if (token != null){
+    public void deleteCustomer() {
+        if (token != null) {
             customerClient.delete(token);
         }
     }
