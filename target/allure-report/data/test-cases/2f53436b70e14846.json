@@ -1,0 +1,426 @@
+{
+  "uid" : "2f53436b70e14846",
+  "name" : "Check status code and body after changing customer data with duplicate email",
+  "fullName" : "customer.ChangCustomerDataTests.testChangCustomerDataWithDuplicateEmail",
+  "historyId" : "588476e57a2372f50a2b584125e398fd",
+  "time" : {
+    "start" : 1695926567291,
+    "stop" : 1695926571709,
+    "duration" : 4418
+  },
+  "description" : "Checking bad chang",
+  "descriptionHtml" : "<p>Checking bad chang</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Checking bad chang",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generator random customer for create",
+      "time" : {
+        "start" : 1695926567291,
+        "stop" : 1695926567350,
+        "duration" : 59
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Generator random email",
+        "time" : {
+          "start" : 1695926567291,
+          "stop" : 1695926567319,
+          "duration" : 28
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random password",
+        "time" : {
+          "start" : 1695926567319,
+          "stop" : 1695926567320,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random name",
+        "time" : {
+          "start" : 1695926567326,
+          "stop" : 1695926567350,
+          "duration" : 24
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 3
+    }, {
+      "name" : "Api post to create customer",
+      "time" : {
+        "start" : 1695926567350,
+        "stop" : 1695926568056,
+        "duration" : 706
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "customer",
+        "value" : "customer.Customer@77583895"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Extract AccessToken from the response data",
+      "time" : {
+        "start" : 1695926568056,
+        "stop" : 1695926568057,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@113dd3a4"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Extract RefreshToken from the response data",
+      "time" : {
+        "start" : 1695926568057,
+        "stop" : 1695926568058,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@113dd3a4"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Generator random customer for create",
+      "time" : {
+        "start" : 1695926568058,
+        "stop" : 1695926568112,
+        "duration" : 54
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Generator random email",
+        "time" : {
+          "start" : 1695926568058,
+          "stop" : 1695926568093,
+          "duration" : 35
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random password",
+        "time" : {
+          "start" : 1695926568093,
+          "stop" : 1695926568094,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random name",
+        "time" : {
+          "start" : 1695926568094,
+          "stop" : 1695926568112,
+          "duration" : 18
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 3
+    }, {
+      "name" : "Api post to create customer",
+      "time" : {
+        "start" : 1695926568112,
+        "stop" : 1695926568821,
+        "duration" : 709
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "customer",
+        "value" : "customer.Customer@33ca5297"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Extract AccessToken from the response data",
+      "time" : {
+        "start" : 1695926568821,
+        "stop" : 1695926568822,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@35551d"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Generator random password",
+      "time" : {
+        "start" : 1695926568822,
+        "stop" : 1695926568823,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Generator random name",
+      "time" : {
+        "start" : 1695926568823,
+        "stop" : 1695926568844,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api patch to modify data the customer",
+      "time" : {
+        "start" : 1695926568844,
+        "stop" : 1695926569566,
+        "duration" : 722
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "customer",
+        "value" : "customer.Customer@2aa3ac73"
+      }, {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTVjOTI4OWVkMjgwMDAxYjM2YzE2MiIsImlhdCI6MTY5NTkyNjU2OCwiZXhwIjoxNjk1OTI3NzY4fQ.N4uuz3Q8nbbImiiB3ZOBl-PEXzEuoW4qRHLMWyd8AaU"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking status code",
+      "time" : {
+        "start" : 1695926569566,
+        "stop" : 1695926569566,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "code",
+        "value" : "403"
+      }, {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@7f6d3a09"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking in the false success response",
+      "time" : {
+        "start" : 1695926569567,
+        "stop" : 1695926569594,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "jsonPath",
+        "value" : "io.restassured.path.json.JsonPath@2ed1db64"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking error massage",
+      "time" : {
+        "start" : 1695926569623,
+        "stop" : 1695926569623,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expected",
+        "value" : "User with such email already exists"
+      }, {
+        "name" : "actual",
+        "value" : "User with such email already exists"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api delete this customer",
+      "time" : {
+        "start" : 1695926569623,
+        "stop" : 1695926570898,
+        "duration" : 1275
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTVjOTI5OWVkMjgwMDAxYjM2YzE2NCIsImlhdCI6MTY5NTkyNjU2OSwiZXhwIjoxNjk1OTI3NzY5fQ.-nNCkQjV9SLzDaM2oQZ9pNDcLp6ydyhxn6KTgb7d7zs"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api delete this customer",
+      "time" : {
+        "start" : 1695926570898,
+        "stop" : 1695926571709,
+        "duration" : 811
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTVjOTI4OWVkMjgwMDAxYjM2YzE2MiIsImlhdCI6MTY5NTkyNjU2OCwiZXhwIjoxNjk1OTI3NzY4fQ.N4uuz3Q8nbbImiiB3ZOBl-PEXzEuoW4qRHLMWyd8AaU"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 21
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "customer"
+  }, {
+    "name" : "testClass",
+    "value" : "customer.ChangCustomerDataTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testChangCustomerDataWithDuplicateEmail"
+  }, {
+    "name" : "suite",
+    "value" : "customer.ChangCustomerDataTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-R11RP3O"
+  }, {
+    "name" : "thread",
+    "value" : "16140@DESKTOP-R11RP3O.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2f53436b70e14846.json",
+  "parameterValues" : [ ]
+}

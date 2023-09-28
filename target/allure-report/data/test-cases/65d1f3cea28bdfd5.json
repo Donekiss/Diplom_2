@@ -1,0 +1,354 @@
+{
+  "uid" : "65d1f3cea28bdfd5",
+  "name" : "Check status code and body for taken orders of the customer with out authorization",
+  "fullName" : "order.GettingCustomerOrdersTest.testGetCustomerOrdersWithOutAuthorization",
+  "historyId" : "1d345eed700d3ff3b1661b529659983f",
+  "time" : {
+    "start" : 1695926613467,
+    "stop" : 1695926618214,
+    "duration" : 4747
+  },
+  "description" : "Checking bad response",
+  "descriptionHtml" : "<p>Checking bad response</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Checking bad response",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generator random customer for create",
+      "time" : {
+        "start" : 1695926613467,
+        "stop" : 1695926613502,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Generator random email",
+        "time" : {
+          "start" : 1695926613467,
+          "stop" : 1695926613489,
+          "duration" : 22
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random password",
+        "time" : {
+          "start" : 1695926613489,
+          "stop" : 1695926613490,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random name",
+        "time" : {
+          "start" : 1695926613490,
+          "stop" : 1695926613502,
+          "duration" : 12
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 3
+    }, {
+      "name" : "Api post to create customer",
+      "time" : {
+        "start" : 1695926613503,
+        "stop" : 1695926614151,
+        "duration" : 648
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "customer",
+        "value" : "customer.Customer@4c2a4612"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Extract AccessToken from the response data",
+      "time" : {
+        "start" : 1695926614151,
+        "stop" : 1695926614152,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@23e4d462"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api get info ingredients",
+      "time" : {
+        "start" : 1695926614152,
+        "stop" : 1695926616877,
+        "duration" : 2725
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Create list with random ingredients",
+      "time" : {
+        "start" : 1695926616877,
+        "stop" : 1695926616879,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Create list  with extracted Id from list orders",
+        "time" : {
+          "start" : 1695926616877,
+          "stop" : 1695926616879,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "response",
+          "value" : "io.restassured.internal.RestAssuredResponseImpl@1a296ffd"
+        } ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : true,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@1a296ffd"
+      }, {
+        "name" : "countIngredients",
+        "value" : "3"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 1
+    }, {
+      "name" : "Create list with random ingredients",
+      "time" : {
+        "start" : 1695926616879,
+        "stop" : 1695926616880,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Create list  with extracted Id from list orders",
+        "time" : {
+          "start" : 1695926616879,
+          "stop" : 1695926616880,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "response",
+          "value" : "io.restassured.internal.RestAssuredResponseImpl@1a296ffd"
+        } ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : true,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@1a296ffd"
+      }, {
+        "name" : "countIngredients",
+        "value" : "4"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 1
+    }, {
+      "name" : "Api get customer orders",
+      "time" : {
+        "start" : 1695926616880,
+        "stop" : 1695926617472,
+        "duration" : 592
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : ""
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking status code",
+      "time" : {
+        "start" : 1695926617472,
+        "stop" : 1695926617472,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "code",
+        "value" : "401"
+      }, {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@5d1ea437"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking in the false success response",
+      "time" : {
+        "start" : 1695926617473,
+        "stop" : 1695926617491,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "jsonPath",
+        "value" : "io.restassured.path.json.JsonPath@9efd55"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking error massage",
+      "time" : {
+        "start" : 1695926617504,
+        "stop" : 1695926617504,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "expected",
+        "value" : "You should be authorised"
+      }, {
+        "name" : "actual",
+        "value" : "You should be authorised"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api delete this customer",
+      "time" : {
+        "start" : 1695926617504,
+        "stop" : 1695926618214,
+        "duration" : 710
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTVjOTU2OWVkMjgwMDAxYjM2YzE4OCIsImlhdCI6MTY5NTkyNjYxNCwiZXhwIjoxNjk1OTI3ODE0fQ.672QKTmcFvAliNZaszZ5O4uDxIrRlJFoB9aIWqsoNL0"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 16
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "order"
+  }, {
+    "name" : "testClass",
+    "value" : "order.GettingCustomerOrdersTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGetCustomerOrdersWithOutAuthorization"
+  }, {
+    "name" : "suite",
+    "value" : "order.GettingCustomerOrdersTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-R11RP3O"
+  }, {
+    "name" : "thread",
+    "value" : "16140@DESKTOP-R11RP3O.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "65d1f3cea28bdfd5.json",
+  "parameterValues" : [ ]
+}

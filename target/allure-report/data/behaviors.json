@@ -1,0 +1,278 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Check status code and body after changing customer data with out authorization",
+    "uid" : "ff2d84011da607a4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926552201,
+      "stop" : 1695926564063,
+      "duration" : 11862
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after changing all customer data",
+    "uid" : "76a4246f2f2bd0fd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926564412,
+      "stop" : 1695926567212,
+      "duration" : 2800
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after changing customer data with duplicate email",
+    "uid" : "2f53436b70e14846",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926567291,
+      "stop" : 1695926571709,
+      "duration" : 4418
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after authorization with out name",
+    "uid" : "f1a62b27ca49e617",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926571724,
+      "stop" : 1695926572499,
+      "duration" : 775
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check response body after try duplicate authorization",
+    "uid" : "23d3f98efd16e390",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926572503,
+      "stop" : 1695926575830,
+      "duration" : 3327
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code create duplicate customer",
+    "uid" : "b237b49792d5a373",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926575836,
+      "stop" : 1695926578972,
+      "duration" : 3136
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check response body structure after authorization",
+    "uid" : "ed6398380d442b1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926578979,
+      "stop" : 1695926580533,
+      "duration" : 1554
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after authorization with out email",
+    "uid" : "ba5411763cbb1867",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926580539,
+      "stop" : 1695926581212,
+      "duration" : 673
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code after authorization",
+    "uid" : "89c0a430f7715e6d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926581217,
+      "stop" : 1695926583899,
+      "duration" : 2682
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after authorization with out password",
+    "uid" : "127a0a83d7fa893d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926583931,
+      "stop" : 1695926584907,
+      "duration" : 976
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check response body structure after login",
+    "uid" : "c40ccb7e60fac76",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926584917,
+      "stop" : 1695926587189,
+      "duration" : 2272
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after login with mistake in password",
+    "uid" : "3fab773d2476497f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926587193,
+      "stop" : 1695926588557,
+      "duration" : 1364
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code after login",
+    "uid" : "8ac0949d2b79ebd1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926588562,
+      "stop" : 1695926590681,
+      "duration" : 2119
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after login with mistake in email",
+    "uid" : "11f2f7eaf8392938",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926590686,
+      "stop" : 1695926593005,
+      "duration" : 2319
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body for null ingredients",
+    "uid" : "c232ed83c7ecbfcb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926593102,
+      "stop" : 1695926596715,
+      "duration" : 3613
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code for invalid ingredients",
+    "uid" : "159ad46934cbd7f3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926596719,
+      "stop" : 1695926599928,
+      "duration" : 3209
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body after create order",
+    "uid" : "dda11f0d7971c1f9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926599936,
+      "stop" : 1695926602938,
+      "duration" : 3002
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code for create order with out token",
+    "uid" : "27856667f5a7e97d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926602943,
+      "stop" : 1695926605811,
+      "duration" : 2868
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status body for taken orders of the customer",
+    "uid" : "ce7cb886340e8df7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926605819,
+      "stop" : 1695926609291,
+      "duration" : 3472
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code for taken orders of the customer",
+    "uid" : "719c3079a891c821",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926609295,
+      "stop" : 1695926613461,
+      "duration" : 4166
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Check status code and body for taken orders of the customer with out authorization",
+    "uid" : "65d1f3cea28bdfd5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1695926613467,
+      "stop" : 1695926618214,
+      "duration" : 4747
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}

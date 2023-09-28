@@ -1,0 +1,255 @@
+{
+  "uid" : "ed6398380d442b1",
+  "name" : "Check response body structure after authorization",
+  "fullName" : "customer.CreateCustomerTests.testCreateCustomerWithResponse",
+  "historyId" : "bf050bd12e8cff41bb8da273a2277a4d",
+  "time" : {
+    "start" : 1695926578979,
+    "stop" : 1695926580533,
+    "duration" : 1554
+  },
+  "description" : "Checking body response",
+  "descriptionHtml" : "<p>Checking body response</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Checking body response",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generator random customer for create",
+      "time" : {
+        "start" : 1695926578979,
+        "stop" : 1695926579017,
+        "duration" : 38
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Generator random email",
+        "time" : {
+          "start" : 1695926578979,
+          "stop" : 1695926579003,
+          "duration" : 24
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random password",
+        "time" : {
+          "start" : 1695926579003,
+          "stop" : 1695926579003,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random name",
+        "time" : {
+          "start" : 1695926579004,
+          "stop" : 1695926579017,
+          "duration" : 13
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 3
+    }, {
+      "name" : "Api post to create customer",
+      "time" : {
+        "start" : 1695926579018,
+        "stop" : 1695926579694,
+        "duration" : 676
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "customer",
+        "value" : "customer.Customer@fece07a"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking in the success response",
+      "time" : {
+        "start" : 1695926579695,
+        "stop" : 1695926579719,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "jsonPath",
+        "value" : "io.restassured.path.json.JsonPath@36429305"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking in body not null AccessToken",
+      "time" : {
+        "start" : 1695926579719,
+        "stop" : 1695926579735,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "jsonPath",
+        "value" : "io.restassured.path.json.JsonPath@36429305"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking in body not null RefreshToken",
+      "time" : {
+        "start" : 1695926579735,
+        "stop" : 1695926579756,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "jsonPath",
+        "value" : "io.restassured.path.json.JsonPath@36429305"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking the presence mail and name in the response body",
+      "time" : {
+        "start" : 1695926579756,
+        "stop" : 1695926579776,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "jsonPath",
+        "value" : "io.restassured.path.json.JsonPath@36429305"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Extract AccessToken from the response data",
+      "time" : {
+        "start" : 1695926579776,
+        "stop" : 1695926579780,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@7bc5285c"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api delete this customer",
+      "time" : {
+        "start" : 1695926579780,
+        "stop" : 1695926580533,
+        "duration" : 753
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTVjOTM0OWVkMjgwMDAxYjM2YzE2YyIsImlhdCI6MTY5NTkyNjU4MCwiZXhwIjoxNjk1OTI3NzgwfQ.D-oSv105Z7tLdN5FfLejgdKXE0ajCuf30xhNLEoClVY"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 11
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "customer"
+  }, {
+    "name" : "testClass",
+    "value" : "customer.CreateCustomerTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCreateCustomerWithResponse"
+  }, {
+    "name" : "suite",
+    "value" : "customer.CreateCustomerTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-R11RP3O"
+  }, {
+    "name" : "thread",
+    "value" : "16140@DESKTOP-R11RP3O.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ed6398380d442b1.json",
+  "parameterValues" : [ ]
+}

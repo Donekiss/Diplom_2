@@ -1,0 +1,222 @@
+{
+  "uid" : "b237b49792d5a373",
+  "name" : "Check status code create duplicate customer",
+  "fullName" : "customer.CreateCustomerTests.testCreateCustomerDuplicate",
+  "historyId" : "411484f4c02794f902f8ca1abf4d6866",
+  "time" : {
+    "start" : 1695926575836,
+    "stop" : 1695926578972,
+    "duration" : 3136
+  },
+  "description" : "Checking code double registration",
+  "descriptionHtml" : "<p>Checking code double registration</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Checking code double registration",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generator random customer for create",
+      "time" : {
+        "start" : 1695926575837,
+        "stop" : 1695926575868,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Generator random email",
+        "time" : {
+          "start" : 1695926575837,
+          "stop" : 1695926575858,
+          "duration" : 21
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random password",
+        "time" : {
+          "start" : 1695926575858,
+          "stop" : 1695926575859,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      }, {
+        "name" : "Generator random name",
+        "time" : {
+          "start" : 1695926575859,
+          "stop" : 1695926575868,
+          "duration" : 9
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "hasContent" : false,
+        "stepsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 3
+    }, {
+      "name" : "Api post to create customer",
+      "time" : {
+        "start" : 1695926575868,
+        "stop" : 1695926576591,
+        "duration" : 723
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "customer",
+        "value" : "customer.Customer@56b0a45c"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Extract AccessToken from the response data",
+      "time" : {
+        "start" : 1695926576591,
+        "stop" : 1695926576592,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@756a1af4"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api post to create customer",
+      "time" : {
+        "start" : 1695926576592,
+        "stop" : 1695926577197,
+        "duration" : 605
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "customer",
+        "value" : "customer.Customer@56b0a45c"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Checking status code",
+      "time" : {
+        "start" : 1695926577197,
+        "stop" : 1695926577197,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "code",
+        "value" : "403"
+      }, {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@34442e7a"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Api delete this customer",
+      "time" : {
+        "start" : 1695926577197,
+        "stop" : 1695926578972,
+        "duration" : 1775
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "token",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTVjOTMwOWVkMjgwMDAxYjM2YzE2YSIsImlhdCI6MTY5NTkyNjU3NiwiZXhwIjoxNjk1OTI3Nzc2fQ.jDY9phBznN2WgZJQhDkhdgfSy5UCQa14kQRY1yZFkvI"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : true,
+    "stepsCount" : 9
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "customer"
+  }, {
+    "name" : "testClass",
+    "value" : "customer.CreateCustomerTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCreateCustomerDuplicate"
+  }, {
+    "name" : "suite",
+    "value" : "customer.CreateCustomerTests"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-R11RP3O"
+  }, {
+    "name" : "thread",
+    "value" : "16140@DESKTOP-R11RP3O.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b237b49792d5a373.json",
+  "parameterValues" : [ ]
+}
